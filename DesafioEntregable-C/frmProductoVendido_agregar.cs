@@ -22,7 +22,7 @@ namespace DesafioEntregable_C
             ProductoVendido producto = new ProductoVendido();
             producto._IdProducto = Convert.ToInt32(numIdProducto.Value);
             producto._Stock = Convert.ToInt32(numStock.Value);
-            producto._IdUsuario = Convert.ToInt32(numIdUsuario.Value);
+            producto._IdVenta = Convert.ToInt32(numIdVenta.Value);
             Context.AgregarProducto(producto);
             MessageBox.Show("Producto guardado");
         }

@@ -10,7 +10,7 @@ namespace DesafioEntregable_C
         private void btnProductos_Click(object sender, EventArgs e)
         {
             WdwProductos wdwProductos = new WdwProductos();
-            wdwProductos.FormClosed += wdwProductos_FormClosed;
+            wdwProductos.FormClosed += _FormClosed;
             wdwProductos.ShowDialog();
         }
 
@@ -22,23 +22,27 @@ namespace DesafioEntregable_C
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             WdwUsuarios wdwUsuarios = new WdwUsuarios();
-            wdwUsuarios.FormClosed += WdwUsuarios_FormClosed;
+            wdwUsuarios.FormClosed += _FormClosed;
             wdwUsuarios.ShowDialog();
         }
 
-        private void WdwUsuarios_FormClosed(object sender, FormClosedEventArgs e)
+        private void _FormClosed(object sender, FormClosedEventArgs e)
         {
 
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-
+            WdwVenta wdwVenta = new WdwVenta();
+            wdwVenta.FormClosed += _FormClosed;
+            wdwVenta.ShowDialog();
         }
 
         private void btnProdcutosVendidos_Click(object sender, EventArgs e)
         {
-
+            WdwProductoVendido wwProductoVendido = new WdwProductoVendido();
+            wwProductoVendido.FormClosed += _FormClosed;
+            wwProductoVendido.ShowDialog();
         }
     }
 }

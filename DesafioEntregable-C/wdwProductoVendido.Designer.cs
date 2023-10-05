@@ -1,6 +1,6 @@
 ﻿namespace DesafioEntregable_C
 {
-    partial class wdwProductoVendido
+    partial class WdwProductoVendido
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            btnAgregarProductoVendido = new Button();
             Id = new DataGridViewTextBoxColumn();
             IdProducto = new DataGridViewTextBoxColumn();
             Stock = new DataGridViewTextBoxColumn();
-            IdUsuario = new DataGridViewTextBoxColumn();
+            IdVenta = new DataGridViewTextBoxColumn();
             Editar = new DataGridViewButtonColumn();
             Eliminar = new DataGridViewButtonColumn();
-            btnAgregarProductoVendido = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -44,13 +44,23 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, IdProducto, Stock, IdUsuario, Editar, Eliminar });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, IdProducto, Stock, IdVenta, Editar, Eliminar });
             dataGridView1.Location = new Point(12, 88);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(776, 350);
             dataGridView1.TabIndex = 0;
+            // 
+            // btnAgregarProductoVendido
+            // 
+            btnAgregarProductoVendido.Location = new Point(618, 12);
+            btnAgregarProductoVendido.Name = "btnAgregarProductoVendido";
+            btnAgregarProductoVendido.Size = new Size(170, 70);
+            btnAgregarProductoVendido.TabIndex = 1;
+            btnAgregarProductoVendido.Text = "Nuevo producto vendido";
+            btnAgregarProductoVendido.UseVisualStyleBackColor = true;
+            btnAgregarProductoVendido.Click += btnAgregarProductoVendido_Click;
             // 
             // Id
             // 
@@ -73,12 +83,12 @@
             Stock.Name = "Stock";
             Stock.ReadOnly = true;
             // 
-            // IdUsuario
+            // IdVenta
             // 
-            IdUsuario.DataPropertyName = "IdUsuario";
-            IdUsuario.HeaderText = "Id del Usuario";
-            IdUsuario.Name = "IdUsuario";
-            IdUsuario.ReadOnly = true;
+            IdVenta.DataPropertyName = "IdVenta";
+            IdVenta.HeaderText = "ID de la venta";
+            IdVenta.Name = "IdVenta";
+            IdVenta.ReadOnly = true;
             // 
             // Editar
             // 
@@ -94,17 +104,7 @@
             Eliminar.Name = "Eliminar";
             Eliminar.ReadOnly = true;
             // 
-            // btnAgregarProductoVendido
-            // 
-            btnAgregarProductoVendido.Location = new Point(618, 12);
-            btnAgregarProductoVendido.Name = "btnAgregarProductoVendido";
-            btnAgregarProductoVendido.Size = new Size(170, 70);
-            btnAgregarProductoVendido.TabIndex = 1;
-            btnAgregarProductoVendido.Text = "Nuevo producto vendido";
-            btnAgregarProductoVendido.UseVisualStyleBackColor = true;
-            btnAgregarProductoVendido.Click += btnAgregarProductoVendido_Click;
-            // 
-            // wdwProductoVendido
+            // WdwProductoVendido
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -112,7 +112,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnAgregarProductoVendido);
             Controls.Add(dataGridView1);
-            Name = "wdwProductoVendido";
+            Name = "WdwProductoVendido";
             Text = "wdwProductoVendido";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -121,12 +121,12 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private Button btnAgregarProductoVendido;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn IdProducto;
         private DataGridViewTextBoxColumn Stock;
-        private DataGridViewTextBoxColumn IdUsuario;
+        private DataGridViewTextBoxColumn IdVenta;
         private DataGridViewButtonColumn Editar;
         private DataGridViewButtonColumn Eliminar;
-        private Button btnAgregarProductoVendido;
     }
 }

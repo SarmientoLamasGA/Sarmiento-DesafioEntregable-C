@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DesafioEntregable_C
 {
-    public partial class wdwProductoVendido : Form
+    public partial class WdwProductoVendido : Form
     {
-        public wdwProductoVendido()
+        public WdwProductoVendido()
         {
             InitializeComponent();
             List<ProductoVendido> lista = Context.VisualizarProductosVendidos();

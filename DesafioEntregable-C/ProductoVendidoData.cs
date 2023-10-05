@@ -14,7 +14,7 @@ namespace DesafioEntregable_C
         {
             List<ProductoVendido> lista = new List<ProductoVendido>();
             string connectionString = @"Server=DESKTOP-D8L8JL0\MSSQLSERVER01;Database=pruebasClase;Trusted_Connection=True";
-            string query = "SELECT Id,IdProducto,Stock,IdUsuario FROM pruebasClase.dbo.ProductoVendido WHERE Id=@Id";
+            string query = "SELECT Id,IdProducto,Stock,IdVenta FROM pruebasClase.dbo.ProductoVendido WHERE Id=@Id";
 
             try
             {
@@ -33,7 +33,7 @@ namespace DesafioEntregable_C
                                     productoVendido._Id = Convert.ToInt32(dr["Id"]);
                                     productoVendido._IdProducto = Convert.ToInt32(dr["IdProducto"]);
                                     productoVendido._Stock = Convert.ToInt32(dr["Stock"]);
-                                    productoVendido._IdUsuario = Convert.ToInt32(dr["IdUsuario"]);
+                                    productoVendido._IdVenta = Convert.ToInt32(dr["IdVenta"]);
                                     lista.Add(productoVendido);
                                 }
                             }
@@ -53,7 +53,7 @@ namespace DesafioEntregable_C
         {
             List<ProductoVendido> lista = new List<ProductoVendido>();
             string connectionString = @"Server=DESKTOP-D8L8JL0\MSSQLSERVER01;Database=pruebasClase;Trusted_Connection=True";
-            string query = "SELECT Id,IdProducto,Stock,IdUsuario FROM pruebasClase.dbo.ProductoVendido";
+            string query = "SELECT Id,IdProducto,Stock,IdVenta FROM pruebasClase.dbo.ProductoVendido";
 
             try
             {
@@ -72,7 +72,7 @@ namespace DesafioEntregable_C
                                     productoVendido._Id = Convert.ToInt32(dr["Id"]);
                                     productoVendido._IdProducto = Convert.ToInt32(dr["IdProducto"]);
                                     productoVendido._Stock = Convert.ToInt32(dr["Stock"]);
-                                    productoVendido._IdUsuario = Convert.ToInt32(dr["IdUsuario"]);
+                                    productoVendido._IdVenta = Convert.ToInt32(dr["IdVenta"]);
                                     lista.Add(productoVendido);
                                 }
                             }
@@ -91,7 +91,7 @@ namespace DesafioEntregable_C
         public static void CrearProductoVendido(ProductoVendido producto)
         {
             string connectionString = @"Server=DESKTOP-D8L8JL0\MSSQLSERVER01;Database=pruebasClase;Trusted_Connection=True";
-            string query = "INSERT INTO ProductoVendido (IdProducto,Stock,IdUsuario)" + "VALUES(@IdProducto,@Stock,@IdUsuario)";
+            string query = "INSERT INTO ProductoVendido (IdProducto,Stock,IdVenta)" + "VALUES(@IdProducto,@Stock,@IdVenta)";
 
             try
             {
@@ -102,7 +102,7 @@ namespace DesafioEntregable_C
                     {
                         command.Parameters.Add(new SqlParameter("IdProducto", SqlDbType.VarChar) { Value = producto._IdProducto });
                         command.Parameters.Add(new SqlParameter("Stock", SqlDbType.Int) { Value = producto._Stock });
-                        command.Parameters.Add(new SqlParameter("IdUsuario", SqlDbType.VarChar) { Value = producto._IdUsuario });
+                        command.Parameters.Add(new SqlParameter("IdVenta", SqlDbType.VarChar) { Value = producto._IdVenta });
                     }
                     conn.Close();
                 }
@@ -118,7 +118,7 @@ namespace DesafioEntregable_C
             string query = "UPDATE Producto" +
                 "SET Descripciones = @Descripciones" +
                 ",Stock = @Stock" +
-                ",IdUsuario = @IdUsuario" +
+                ",IdVenta = @IdVenta" +
                 "WHERE Id = @Id";
 
             try
@@ -131,7 +131,7 @@ namespace DesafioEntregable_C
                         command.Parameters.Add(new SqlParameter("Id", SqlDbType.Int) { Value = producto._Id });
                         command.Parameters.Add(new SqlParameter("IdProducto", SqlDbType.VarChar) { Value = producto._IdProducto });
                         command.Parameters.Add(new SqlParameter("Stock", SqlDbType.Int) { Value = producto._Stock });
-                        command.Parameters.Add(new SqlParameter("IdUsuario", SqlDbType.VarChar) { Value = producto._IdUsuario });
+                        command.Parameters.Add(new SqlParameter("IdVenta", SqlDbType.VarChar) { Value = producto._IdVenta });
                     }
                     conn.Close();
                 }

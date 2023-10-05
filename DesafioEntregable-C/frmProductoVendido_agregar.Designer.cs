@@ -32,10 +32,10 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            numIdUsuario = new NumericUpDown();
+            numIdVenta = new NumericUpDown();
             numStock = new NumericUpDown();
             numIdProducto = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)numIdUsuario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numIdVenta).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numStock).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numIdProducto).BeginInit();
             SuspendLayout();
@@ -55,9 +55,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(358, 237);
             label3.Name = "label3";
-            label3.Size = new Size(80, 15);
+            label3.Size = new Size(78, 15);
             label3.TabIndex = 12;
-            label3.Text = "ID del Usuario";
+            label3.Text = "ID de la venta";
             // 
             // label2
             // 
@@ -77,12 +77,12 @@
             label1.TabIndex = 10;
             label1.Text = "ID del Producto";
             // 
-            // numIdUsuario
+            // numIdVenta
             // 
-            numIdUsuario.Location = new Point(340, 255);
-            numIdUsuario.Name = "numIdUsuario";
-            numIdUsuario.Size = new Size(120, 23);
-            numIdUsuario.TabIndex = 9;
+            numIdVenta.Location = new Point(340, 255);
+            numIdVenta.Name = "numIdVenta";
+            numIdVenta.Size = new Size(120, 23);
+            numIdVenta.TabIndex = 9;
             // 
             // numStock
             // 
@@ -108,12 +108,12 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(numIdUsuario);
+            Controls.Add(numIdVenta);
             Controls.Add(numStock);
             Controls.Add(numIdProducto);
             Name = "frmProductoVendido_agregar";
             Text = "frmProductoVendido_agregar";
-            ((System.ComponentModel.ISupportInitialize)numIdUsuario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numIdVenta).EndInit();
             ((System.ComponentModel.ISupportInitialize)numStock).EndInit();
             ((System.ComponentModel.ISupportInitialize)numIdProducto).EndInit();
             ResumeLayout(false);
@@ -126,7 +126,7 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private NumericUpDown numIdUsuario;
+        private NumericUpDown numIdVenta;
         private NumericUpDown numStock;
         private NumericUpDown numIdProducto;
     }

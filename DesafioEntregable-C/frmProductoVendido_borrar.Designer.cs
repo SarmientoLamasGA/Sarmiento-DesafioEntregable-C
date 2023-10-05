@@ -55,9 +55,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(366, 234);
             label3.Name = "label3";
-            label3.Size = new Size(80, 15);
+            label3.Size = new Size(78, 15);
             label3.TabIndex = 19;
-            label3.Text = "ID del Usuario";
+            label3.Text = "ID de la venta";
             // 
             // label2
             // 

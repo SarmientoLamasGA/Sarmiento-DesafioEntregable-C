@@ -18,7 +18,7 @@ namespace DesafioEntregable_C
             InitializeComponent();
             this.numIdProducto.Value = Convert.ToUInt32(_producto._IdProducto);
             this.numStock.Value = Convert.ToUInt32(_producto._Stock);
-            this.numIdUsuario.Value = Convert.ToUInt32(_producto._IdUsuario);
+            this.numIdUsuario.Value = Convert.ToUInt32(_producto._IdVenta);
         }
 
 

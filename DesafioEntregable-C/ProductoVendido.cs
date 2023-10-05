@@ -11,7 +11,7 @@ namespace DesafioEntregable_C
         public int _Id { get; set; }
         public int _IdProducto { get; set; }
         public int _Stock {  get; set; }
-        public int _IdUsuario { get; set; }
+        public int _IdVenta { get; set; }
 
     }
 }

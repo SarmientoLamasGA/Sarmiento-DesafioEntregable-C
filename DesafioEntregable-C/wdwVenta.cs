@@ -10,25 +10,24 @@ using System.Windows.Forms;
 
 namespace DesafioEntregable_C
 {
-    public partial class wdwVenta : Form
+    public partial class WdwVenta : Form
     {
-        public wdwVenta()
+        public WdwVenta()
         {
             InitializeComponent();
             List<Venta> lista = Context.VisualizarVentas();
-            //NO ME RECONOCE DATAGRIDVIEW1
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = lista;
         }
 
-        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        private void btnAgregarVenta_Click(object sender, EventArgs e)
         {
             frmProducto_agregar agregar = new frmProducto_agregar();
-            agregar.FormClosed += wdwVentas_agregar_FormClosed;
+            agregar.FormClosed += btnAgregarVenta_Click_FormClosed;
             agregar.ShowDialog();
         }
 
-        private void wdwVentas_agregar_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnAgregarVenta_Click_FormClosed(object sender, FormClosedEventArgs e)
         {
             List<Venta> lista = Context.VisualizarVentas();
             dataGridView1.AutoGenerateColumns = false;
@@ -43,13 +42,13 @@ namespace DesafioEntregable_C
             if (this.dataGridView1.Columns[e.ColumnIndex].Name == "btnEditar")
             {
                 frmProducto_borrar borrar = new frmProducto_borrar();
-                borrar.FormClosed += wdwVentas_agregar_FormClosed;
+                borrar.FormClosed += btnAgregarVenta_Click_FormClosed;
                 borrar.ShowDialog();
             }
             else if (this.dataGridView1.Columns[e.ColumnIndex].Name == "btnEliminar")
             {
                 frmProducto_borrar eliminar = new frmProducto_borrar();
-                eliminar.FormClosed += wdwVentas_agregar_FormClosed;
+                eliminar.FormClosed += btnAgregarVenta_Click_FormClosed;
                 eliminar.ShowDialog();
             }
         }
